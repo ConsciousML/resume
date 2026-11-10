@@ -29,6 +29,9 @@
 \name{Axel}{Mendoza}
 \title{Platform Engineer}
 
+% Location is passed in by build.sh, one PDF per location.
+\ifdefined\location\else\errmessage{\string\location\space is undefined: build with ./build.sh or make}\fi
+
 \begin{document}
 
 % Hand-written header instead of \makecvtitle: tighter spacing, and contact details wrap onto two lines.
@@ -36,8 +39,7 @@
 \begin{center}
     {\fontsize{22}{26}\bfseries\color{color1}Axel Mendoza \color{color0}--- Senior MLOps \& Platform Engineer}\\[4pt]
     {\color{color2}
-    \labelicon{Location}{\faMapMarker*}~Based in Mexico (work permit)\quad
-    \labelicon{Citizenship}{\faPassport}~EU citizen (French)\quad
+    \labelicon{Location}{\faMapMarker*}~\location\quad
     \labelicon{Email}{\faAt}~\href{mailto:axelmendoza@hotmail.fr}{axelmendoza@hotmail.fr}\\
     \labelicon{LinkedIn}{\faLinkedin}~\href{https://www.linkedin.com/in/axelmdz}{linkedin.com/in/axelmdz}\quad
     \labelicon{Website}{\faBlog}~\href{https://www.axelmendoza.com}{axelmendoza.com}\quad
@@ -47,15 +49,15 @@
 \section{\lbl{Section}{Experience}}
 \cventry{\textbf{\upshape \lbl{Duration}{1 year 3 months}}}{\lbl{Title}{Platform Engineer, Open Source}}{\lbl{Company}{EKS Forge}}{\mdseries \lbl{Dates}{Aug 2025 - Present}}{}{
     \begin{itemize}
-    \item Architecting and building \textbf{\weblink{https://eks-forge.readthedocs.io/latest/}{EKS Forge}}, an \textbf{open-source platform} for Kubernetes on AWS designed to be forked, understood, and operated by a small team, \textbf{deployable in about a day}
+    \item Architecting and building \textbf{\weblink{https://eks-forge.readthedocs.io/latest/}{EKS Forge}}, an \textbf{open-source platform} for Kubernetes on AWS designed to be forked, understood, and operated. It's \textbf{deployable in about a day}
     \item \textbf{Multi-environment IaC} (dev, staging, prod) with Terraform/OpenTofu and Terragrunt
     \item \textbf{GitOps} with ArgoCD (App of Apps) and Helm
     \item \textbf{Node autoscaling} with Karpenter
     \item Private and public \textbf{ingress} with ALBs via Gateway API and the AWS Load Balancer Controller, \textbf{TLS} termination, and \textbf{DNS} via ExternalDNS and Route 53
     \item \textbf{Secured access} with workload identity via EKS Pod Identity, a Tailscale VPN into private VPC subnets, NAT and VPC Endpoint egress, security groups, and Cilium network policies
-    \item \textbf{Monitoring}, \textbf{logging}, and \textbf{alerting} with Prometheus, Grafana, and Loki
     \item \textbf{CI/CD} with GitHub Actions: Terratest suites that \textbf{deploy} and \textbf{test real clusters}, with \textbf{gated promotion} to production
     \item Published \textbf{documentation site} covering tutorials, how-tos, and architecture
+    \item \textbf{SRE}: Prometheus, Grafana, Loki, \textbf{SLI}s/\textbf{SLO}s, Sloth \textbf{multi-window burn rate} alerts, paging on \textbf{PagerDuty} and alerting on Slack
     \end{itemize}
 }
 \cventry{\textbf{\upshape \lbl{Duration}{6 years}}}{\lbl{Title}{Technical Writer}}{\lbl{Company}{ConsciousML Blog}}{\mdseries \lbl{Dates}{Oct 2020 - Present}}{\lbl{Employment type}{Freelance \& Self-employed}}{
@@ -73,7 +75,7 @@
     \item Built \textbf{data pipelines} with Airbyte, dbt and Dagster and set up \textbf{experiment tracking} with MLflow
     \item \textbf{Monitored ML models} with OpenTelemetry and Elastic for observability
     \item \textbf{Load-tested} and \textbf{optimized} model server \textbf{inference} latency with Locust
-    \item \textbf{On-call} for the production recommender: performed \textbf{incident response} and \textbf{root cause analysis}, defined \textbf{SLI}s and \textbf{SLO}s, wrote postmortems, and routed \textbf{alerts} to Slack using Cloud Monitoring
+    \item \textbf{On-call} for the production recommender: performed \textbf{incident response} and \textbf{root cause analysis}, defined \textbf{SLI}s and \textbf{SLO}s, wrote postmortems, and set up \textbf{multi-window burn rate} \textbf{alerts} in Cloud Monitoring, paging to \textbf{PagerDuty} and notifying Slack
     \end{itemize}
 }
 \cventry{\textbf{\upshape \lbl{Duration}{2 years 5 months}}}{\lbl{Title}{Computer Vision Engineer}}{\lbl{Company}{Boxy}}{\mdseries \lbl{Dates}{Dec 2020 - Apr 2023}}{\lbl{Location}{Paris, France}}{
@@ -99,7 +101,7 @@
 \section{\lbl{Section}{Technical Skills}}
 \cvitem{Cloud \& Infra}{AWS (EKS, VPC, IAM, EC2, ALB, ACM, Route 53), GCP (Vertex AI, Compute Engine, Cloud Run, BigQuery, Pub/Sub, Cloud Monitoring), Terraform, Terragrunt, Terratest, Docker, GitHub Actions, Linux}
 \cvitem{Kubernetes}{ArgoCD, Helm, Karpenter, Cilium, Gateway API, External Secrets, ExternalDNS}
-\cvitem{Observability}{Prometheus, Grafana, Loki, OpenTelemetry, Elastic}
+\cvitem{Observability}{Prometheus, Grafana, Loki, Sloth, OpenTelemetry, Elastic}
 \cvitem{ML \& Data}{PyTorch, BentoML, MLflow, Dagster, Airflow, dbt, Airbyte}
 \cvitem{Languages}{Python, SQL, C++, Bash}
 
