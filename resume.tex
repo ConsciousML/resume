@@ -29,6 +29,9 @@
 \name{Axel}{Mendoza}
 \title{Platform Engineer}
 
+% Location is passed in by build.sh, one PDF per location.
+\ifdefined\location\else\errmessage{\string\location\space is undefined: build with ./build.sh or make}\fi
+
 \begin{document}
 
 % Hand-written header instead of \makecvtitle: tighter spacing, and contact details wrap onto two lines.
@@ -36,8 +39,7 @@
 \begin{center}
     {\fontsize{22}{26}\bfseries\color{color1}Axel Mendoza \color{color0}--- Senior MLOps \& Platform Engineer}\\[4pt]
     {\color{color2}
-    \labelicon{Location}{\faMapMarker*}~Based in Mexico (work permit)\quad
-    \labelicon{Citizenship}{\faPassport}~EU citizen (French)\quad
+    \labelicon{Location}{\faMapMarker*}~\location\quad
     \labelicon{Email}{\faAt}~\href{mailto:axelmendoza@hotmail.fr}{axelmendoza@hotmail.fr}\\
     \labelicon{LinkedIn}{\faLinkedin}~\href{https://www.linkedin.com/in/axelmdz}{linkedin.com/in/axelmdz}\quad
     \labelicon{Website}{\faBlog}~\href{https://www.axelmendoza.com}{axelmendoza.com}\quad

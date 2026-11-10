@@ -52,11 +52,10 @@ Install [TeX Live](https://www.tug.org/texlive/) 2022, which provides `pdflatex`
 ## Build
 
 ```sh
-mkdir -p build
-pdflatex -output-directory build resume.tex
+make
 ```
 
-The PDF is written to `build/resume.pdf`.
+This runs `build.sh`, which writes one PDF per location to `build/`: `resume-mexico.pdf` and `resume-france.pdf`. The location is passed in at build time, so compiling `resume.tex` directly fails. To add a location, add it to the loop in `build.sh`.
 
 ## Workflow
 
