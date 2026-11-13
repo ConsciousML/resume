@@ -49,10 +49,10 @@
 \section{\lbl{Section}{Experience}}
 \cventry{\textbf{\upshape \lbl{Duration}{1 year 3 months}}}{\lbl{Title}{Platform Engineer, Open Source}}{\lbl{Company}{EKS Forge}}{\mdseries \lbl{Dates}{Aug 2025 - Present}}{}{
     \begin{itemize}
-    \item Architecting and building \textbf{\weblink{https://eks-forge.readthedocs.io/latest/}{EKS Forge}}, an \textbf{open-source platform} for Kubernetes on AWS designed to be forked, understood, and operated. It's \textbf{deployable in about a day}
+    \item Architecting and building \textbf{\weblink{https://eks-forge.readthedocs.io/latest/}{EKS Forge}}, an \textbf{open-source platform} for Kubernetes on AWS
     \item \textbf{Multi-environment IaC} (dev, staging, prod) with Terraform/OpenTofu and Terragrunt
     \item \textbf{GitOps} with ArgoCD (App of Apps) and Helm
-    \item \textbf{Node autoscaling} with Karpenter
+    \item \textbf{Node autoscaling} and \textbf{FinOps} with Karpenter
     \item Private and public \textbf{ingress} with ALBs via Gateway API and the AWS Load Balancer Controller, \textbf{TLS} termination, and \textbf{DNS} via ExternalDNS and Route 53
     \item \textbf{Secured access} with workload identity via EKS Pod Identity, a Tailscale VPN into private VPC subnets, NAT and VPC Endpoint egress, security groups, and Cilium network policies
     \item \textbf{CI/CD} with GitHub Actions: Terratest suites in Go that \textbf{deploy} and \textbf{test real clusters}, with \textbf{gated promotion} to production
@@ -75,13 +75,12 @@
     \item Built \textbf{data pipelines} with Airbyte, dbt and Dagster and set up \textbf{experiment tracking} with MLflow
     \item \textbf{Monitored ML models} with OpenTelemetry and Elastic for observability
     \item \textbf{Load-tested} and \textbf{optimized} model server \textbf{inference} latency with Locust
-    \item \textbf{On-call} for the production recommender: performed \textbf{incident response} and \textbf{root cause analysis}, defined \textbf{SLI}s and \textbf{SLO}s, wrote postmortems, and set up \textbf{multi-window burn rate} \textbf{alerts} in Cloud Monitoring, paging to \textbf{PagerDuty} and notifying Slack
+    \item \textbf{On-call}: performed \textbf{incident response}, \textbf{disaster recovery} and \textbf{root cause analysis}, defined service level indicators (\textbf{SLI}s) and service level objectives (\textbf{SLO}s), wrote postmortems, and set up \textbf{multi-window burn rate} \textbf{alerts} in Cloud Monitoring, paging to \textbf{PagerDuty} and notifying Slack
     \end{itemize}
 }
 \cventry{\textbf{\upshape \lbl{Duration}{2 years 5 months}}}{\lbl{Title}{Computer Vision Engineer}}{\lbl{Company}{Boxy}}{\mdseries \lbl{Dates}{Dec 2020 - Apr 2023}}{\lbl{Location}{Paris, France}~\textperiodcentered~Series A \textbf{startup}, 20 people}{
     \begin{itemize}
-    \item Enabled checkout-free shopping by designing the \textbf{person tracking} and \textbf{re-identification} system on GPUs with PyTorch that attributes every product to the right customer
-    \item Reached \textbf{90\% correct product attribution} using \textbf{pose estimation} models
+    \item Enabled checkout-free shopping by designing the \textbf{person tracking} and \textbf{re-identification} system on GPUs with PyTorch, reaching \textbf{90\% correct product attribution} with \textbf{pose estimation} models
     \item Created a semi-automatic \textbf{annotation pipeline} to generate data for Deep Learning
     \item \textbf{Managed} and trained a team of 4 \textbf{annotators} on bounding box and pose video annotation
     \end{itemize}
@@ -103,7 +102,7 @@
 \cvitem{Kubernetes}{ArgoCD, Helm, Karpenter, Cilium, Gateway API, External Secrets, ExternalDNS}
 \cvitem{Observability}{Prometheus, Grafana, Loki, Sloth, OpenTelemetry, Elastic}
 \cvitem{ML \& Data}{PyTorch, BentoML, MLflow, Dagster, Airflow, dbt, Airbyte}
-\cvitem{Languages}{Python, Go, SQL, C++, Bash}
+\cvitem{Languages}{Python, Go (Golang), SQL, C++, Bash}
 
 \section{\lbl{Section}{Education}}
 \cventry{\textbf{\upshape \lbl{Duration}{5 years}}}{\lbl{Degree}{Software Engineering Master Degree, Data Science Major}}{\lbl{School}{EPITA}}{\mdseries \lbl{Dates}{2013 - 2018}}{\lbl{Location}{Paris, France}}{}
